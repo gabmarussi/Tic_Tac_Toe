@@ -1,35 +1,92 @@
-# FECAP - Fundação de Comércio Álvares Penteado
+# FECAP - Fundacao de Comercio Alvares Penteado
 
 <p align="center">
-<a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
+<a href="https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundacao de Comercio Alvares Penteado" border="0"></a>
 </p>
 
-# Jogo da Velha
+# Tic-Tac-Toe
 
-## Integrantes:
+## Team Members:
 Gabriel Marussi - RA: 24026609<br>
 Arthur Rodrigues - RA: 24026567<br>
-Vinicius dos Santos - RA: 24025961<br> 
+Vinicius dos Santos - RA: 24025961<br>
 Matheus Rossaneze - RA: 24026354<br>
 Pedro Schaurich Maia - RA: 24026011<br>
 Lucas Oliveira da Silva - RA: 24025988
 
 ##
-## Professores Orientadores: <a href= "https://www.linkedin.com/in/victorbarq">Victor Bruno Alexander Rosetti de Quiroz</a>
+## Advisor Professor: <a href="https://www.linkedin.com/in/victorbarq">Victor Bruno Alexander Rosetti de Quiroz</a>
 
-## Descrição:
+## Description:
 
-Este é um projeto estudantil valendo nota sobre um Jogo da Velha desenvolvido em grupo utilizando a linguagem C# na plataforma Unity. O jogo foi projetado para ser simples e funcional, com uma interface intuitiva baseada no CyberPunk para um jogador local que se desafiará com uma IA imbatível que se baseia nas suas jogadas sendo impossível de vencer, logo, sempre dando em empate se você não se deixar levar.
+This is a student project developed as a graded group assignment: a Tic-Tac-Toe game built in C# using Unity.
+The game was designed to be simple, functional, and visually themed around a cyberpunk style.
 
-### Características:
+It is a local single-player experience where the human player uses "X" and faces an AI opponent using "0". The AI prioritizes winning moves, then blocking moves, and uses fallback choices when needed, resulting in a very strong opponent that is difficult to beat.
 
-Algumas caracteristicas eram necesárias ao projeto para que valessem mais pontos, dentres essas características, adotamos:
+### Features:
 
-* Jogo para 1 jogador local.
-* Interface gráfica e Menu incluso.
-* Inteligência Artificial imbatível.
+Some features were required by the assignment rubric and were implemented in this project:
 
-## Como Jogar:
+* Local single-player game mode.
+* Graphical interface with a menu scene.
+* Strong AI behavior for turn decisions.
 
-Baixe a plataforma <a href="https://unity.com/pt/download">Unity</a> e baixar a <a href="https://unity.com/releases/editor/whats-new/2022.3.10">versão 2022.3.10</a> para não haver erros.
-Logo abre a cena dentro da "Scenes" e rode o jogo, ao finalizar a partida o reinicie e poderá jogar novamente, fique à vontede para passar "raiva" com a nossa IA.
+## Documentation
+
+### Tech Stack
+
+* Engine: Unity
+* Language: C#
+* UI: Unity UI (Text/Button-based board)
+
+### Recommended Unity Version
+
+To avoid compatibility issues, use Unity version <a href="https://unity.com/releases/editor/whats-new/2022.3.10">2022.3.10</a>.
+
+### Project Structure
+
+Main folders used in this repository:
+
+* `Assets/Resource/Scripts/` - gameplay scripts (including game logic controller).
+* `Scenes/` - playable scenes (`Menu.unity` and `Jogo.unity`).
+* `ProjectSettings/` - Unity project configuration files.
+
+### Core Gameplay Flow
+
+1. The player starts from the menu scene.
+2. A game scene opens with a 3x3 board.
+3. The player places an "X" on an available tile.
+4. The AI immediately responds with "0" based on priority logic:
+	* Complete a winning line if possible.
+	* Block the player's immediate winning line.
+	* Prefer central tile when available.
+	* Use fallback/randomized valid positions.
+5. The game checks for win or draw outcomes.
+
+### How to Run
+
+1. Install Unity Hub and Unity Editor 2022.3.10.
+2. Clone or download this repository.
+3. Open the project folder in Unity Hub.
+4. Open a scene from `Scenes/`:
+	* `Menu.unity` (entry point), or
+	* `Jogo.unity` (direct gameplay).
+5. Press Play in the Unity Editor.
+
+### Notes and Limitations
+
+* The game currently targets local play only.
+* There is no match history or score persistence between rounds.
+* The implementation is focused on assignment goals and gameplay behavior.
+
+### Possible Future Improvements
+
+* Add score tracking and persistent statistics.
+* Improve AI architecture for maintainability and testability.
+* Add sound effects, animations, and additional UI feedback.
+* Add difficulty levels (easy/normal/hard).
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
